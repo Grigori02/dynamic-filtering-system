@@ -8,8 +8,9 @@ const FilterSidebar = ({ setFilters, filters, handleSort, setIsOpen }) => {
             <h3>Filters</h3>
 
             <div>
-                <label>Name:</label>
+                <label htmlFor="name">Name:</label>
                 <input
+                    id="name"
                     type="text"
                     placeholder="Name"
                     value={filters['name']}
@@ -18,11 +19,8 @@ const FilterSidebar = ({ setFilters, filters, handleSort, setIsOpen }) => {
             </div>
 
             <div>
-                <label>Category:</label>
-                <select
-                    value={filters['category']}
-                    onChange={(e) => setFilters({ ...filters, category: e.target.value })}
-                >
+                <label htmlFor="category">Category:</label>
+                <select id="category" defaultValue={filters['category']} onChange={(e) => setFilters({ ...filters, category: e.target.value })}>
                     <option value="">All</option>
                     <option value="Electronics">Electronics</option>
                     <option value="Footwear">Footwear</option>
@@ -31,11 +29,8 @@ const FilterSidebar = ({ setFilters, filters, handleSort, setIsOpen }) => {
             </div>
 
             <div>
-                <label>Brand:</label>
-                <select
-                    value={filters['brand']}
-                    onChange={(e) => setFilters({ ...filters, brand: e.target.value })}
-                >
+                <label htmlFor="brand">Brand:</label>
+                <select id="brand" defaultValue={filters['brand']} onChange={(e) => setFilters({ ...filters, brand: e.target.value })}>
                     <option value="">All</option>
                     <option value="Brand A">Brand A</option>
                     <option value="Brand B">Brand B</option>
@@ -46,32 +41,28 @@ const FilterSidebar = ({ setFilters, filters, handleSort, setIsOpen }) => {
             </div>
 
             <div>
-                <label>Price Range: ${filters?.priceRange[0]} - ${filters?.priceRange[1]}</label>
-                <div className="price-range">
-                    <input
-                        type="range"
-                        min="0"
-                        max="500"
-                        value={filters?.priceRange[0]}
-                        onChange={(e) =>
-                            setFilters({ ...filters, priceRange: [+e.target.value, filters?.priceRange[1]] })
-                        }
-                    />
-                    <input
-                        type="range"
-                        min="0"
-                        max="500"
-                        value={filters?.priceRange[1]}
-                        onChange={(e) =>
-                            setFilters({ ...filters, priceRange: [filters?.priceRange[0], +e.target.value] })
-                        }
-                    />
-                </div>
+                <label htmlFor="price-range">Price Range: ${filters?.priceRange[0]} - ${filters?.priceRange[1]}</label>
+                <input
+                    id="price-range"
+                    type="range"
+                    min="0"
+                    max="500"
+                    value={filters?.priceRange[0]}
+                    onChange={(e) => setFilters({ ...filters, priceRange: [+e.target.value, filters?.priceRange[1]] })}
+                />
+                <input
+                    type="range"
+                    min="0"
+                    max="500"
+                    value={filters?.priceRange[1]}
+                    onChange={(e) => setFilters({ ...filters, priceRange: [filters?.priceRange[0], +e.target.value] })}
+                />
             </div>
 
             <div>
-                <label>Rating:</label>
+                <label htmlFor="rating">Rating:</label>
                 <input
+                    id="rating"
                     type="number"
                     min="0"
                     max="5"
@@ -81,8 +72,8 @@ const FilterSidebar = ({ setFilters, filters, handleSort, setIsOpen }) => {
             </div>
 
             <h3>Sorting</h3>
-            <button onClick={() => handleSort('price')}>Sort by Price</button>
-            <button onClick={() => handleSort('rating')}>Sort by Rating</button>
+            <button className='sorting-btn'  onClick={() => handleSort('price')}>Sort by Price</button>
+            <button className='sorting-btn' onClick={() => handleSort('rating')}>Sort by Rating</button>
         </div>
     );
 };

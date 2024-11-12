@@ -1,13 +1,13 @@
 export const dataCountPerPage = 6
 export const mockData = [
-    { id: 1, name: "Wireless Headphones", category: "Electronics", brand: "Brand A", price: 99.99, rating: 4.5, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTER35WU8US4EANAKHB9jBMDerwVx7zU7R-kw&s" },
+    { id: 1, name: "Wireless Headphones", category: "Electronics", brand: "Brand A", price: 99.99, rating: 3, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTER35WU8US4EANAKHB9jBMDerwVx7zU7R-kw&s" },
     { id: 2, name: "Bluetooth Speaker", category: "Electronics", brand: "Brand B", price: 49.99, rating: 4.0, imageUrl: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg" },
     { id: 3, name: "Running Shoes", category: "Electronics", brand: "Brand C", price: 59.99, rating: 4.2, imageUrl: "https://i0.wp.com/picjumbo.com/wp-content/uploads/autumn-wallpaper-free-image.jpg?w=600&quality=80" },
     { id: 4, name: "Smartphone", category: "Electronics", brand: "Brand D", price: 499.99, rating: 4.8, imageUrl: "https://avatars.mds.yandex.net/i?id=d82e28a8034a0e42e5778b96928ce079f6ba3905-4143030-images-thumbs&n=13" },
     { id: 5, name: "Leather Jacket", category: "Clothing", brand: "Brand E", price: 199.99, rating: 4.7, imageUrl: "https://ic.pics.livejournal.com/anton_petrus/33639124/1056102/1056102_original.jpg" },
     { id: 6, name: "Leather Jacket", category: "Clothing", brand: "Brand E", price: 199.99, rating: 4.7, imageUrl: "https://avatars.mds.yandex.net/i?id=f9e308f2233e88d2d47608a2b8dd0a11_l-9234089-images-thumbs&ref=rim&n=13&w=1280&h=853" },
     { id: 7, name: "Wireless Headphones", category: "Electronics", brand: "Brand A", price: 99.99, rating: 4.5, imageUrl: "https://i.pinimg.com/originals/e4/13/a8/e413a8ee07d61297ee5e31f90d50e40a.jpg" },
-    { id: 8, name: "Bluetooth Speaker", category: "Electronics", brand: "Brand B", price: 49.99, rating: 4.0, imageUrl: "https://i.pinimg.com/originals/fe/5e/9f/fe5e9f2f2e147a75cbbf1228d474cb84.jpg" },
+    { id: 8, name: "Bluetooth Speaker", category: "Electronics", brand: "Brand B", price: 49.99, rating: 3, imageUrl: "https://i.pinimg.com/originals/fe/5e/9f/fe5e9f2f2e147a75cbbf1228d474cb84.jpg" },
     { id: 9, name: "Running Shoes", category: "Footwear", brand: "Brand C", price: 100, rating: 4.2, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTER35WU8US4EANAKHB9jBMDerwVx7zU7R-kw&s" },
     { id: 10, name: "Smartphone", category: "Electronics", brand: "Brand D", price: 499.99, rating: 4.8, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTER35WU8US4EANAKHB9jBMDerwVx7zU7R-kw&s" },
     { id: 11, name: "Leather Jacket", category: "Clothing", brand: "Brand E", price: 199.99, rating: 4.7, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTER35WU8US4EANAKHB9jBMDerwVx7zU7R-kw&s" },
