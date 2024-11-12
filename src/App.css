@@ -1,0 +1,21 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-sidebar {
+    display: none;
+}
+.message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 600px) {
+    .filter-sidebar {
+        display: flex;
+    }
+}

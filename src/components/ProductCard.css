@@ -1,0 +1,10 @@
+.card {
+    width: 250px;
+    height: auto;
+    border: 1px solid cadetblue;
+    margin: 10px 35px;
+}
+
+img {
+    width: 100%;
+}

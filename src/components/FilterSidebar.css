@@ -1,0 +1,40 @@
+.filter-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filter-panel h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.filter-panel label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.filter-panel input,
+.filter-panel select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.close-icon {
+    text-align: end;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .close-icon {
+        display: none;
+    }
+}
