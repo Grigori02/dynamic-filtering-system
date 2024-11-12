@@ -1,11 +1,11 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { mockData, dataCountPerPage } from "./const";
+import { useDebounce } from "./customHooks";
+import { getSortedData } from "./utils";
 import ProductsList from "./components/ProductsList";
 import FilterSidebar from "./components/FilterSidebar";
 import Pagination from "./components/Pagination";
 import ClipLoader from "react-spinners/ClipLoader";
-import { useDebounce } from "./customHooks";
-import { getSortedData } from "./utils";
 import DrpMenu from "./components/DrpMenu";
 
 import './App.css';
@@ -55,7 +55,6 @@ const App = () => {
     }
   }, [debouncedQuery, mockData]);
 
-  // Paginate the documents
   const documentsPerPage = useMemo(() => {
     const lastIndex = dataCountPerPage * currentPage;
     const firstIndex = lastIndex - dataCountPerPage;
@@ -85,30 +84,33 @@ const App = () => {
         <div className="filter-sidebar">
           <FilterSidebar filters={filters} setFilters={setFilters} handleSort={handleSort} />
         </div>
-        <DrpMenu filters={filters} setFilters={setFilters} handleSort={handleSort}/>
-        {loading ? (
-            <ClipLoader
-                color={"white"}
-                loading={loading}
-                cssOverride={{
-                  display: "#5f9ea0",
-                  margin: "auto",
-                  borderColor: "#5f9ea0",
-                }}
-                size={100}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-            />
-        ) : !documentsPerPage.length ? (
-            <span className="message">No products found!</span>
-        ) : (
-            <div>
-              <ProductsList documentsPerPage={documentsPerPage} />
-              {documentsList.length > dataCountPerPage && (
-                  <Pagination products={documentsList} dataCountPerPage={dataCountPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-              )}
-            </div>
-        )}
+
+     <div className="mb-content">
+       <DrpMenu filters={filters} setFilters={setFilters} handleSort={handleSort}/>
+       {loading ? (
+           <ClipLoader
+               color={"white"}
+               loading={loading}
+               cssOverride={{
+                 display: "block",
+                 margin: "25% 50%",
+                 borderColor: "black",
+               }}
+               size={50}
+               aria-label="Loading Spinner"
+               data-testid="loader"
+           />
+       ) : !documentsPerPage.length ? (
+           <span className="message">No products found!</span>
+       ) : (
+           <div>
+             <ProductsList documentsPerPage={documentsPerPage} />
+             {documentsList.length > dataCountPerPage && (
+                 <Pagination products={documentsList} dataCountPerPage={dataCountPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+             )}
+           </div>
+       )}
+     </div>
       </div>
   );
 };
